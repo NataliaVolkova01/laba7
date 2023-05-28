@@ -6,7 +6,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            double a, b;
+            string cont;
+
+            do
+            {
+                double a, b;
             char z;
             Console.WriteLine("Введите a ");
             a = Convert.ToDouble(Console.ReadLine());
@@ -35,7 +39,11 @@ namespace ConsoleApp1
                     Console.WriteLine("Ошибка");
                     break;
             }
-            Console.ReadLine();
+                Console.WriteLine("Совершить еще одну операцию?");
+                cont = Convert.ToString(Console.ReadLine());
+
+            } while (cont == "да");
+
         }
     }
 }
